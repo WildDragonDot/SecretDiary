@@ -12,42 +12,42 @@ session_start();
     <title>Signup</title>
 </head>
 <body>
-<div class="container">
+<div class="container"><!--container start-->
 <div class="row">
 <div class="col-md-5 mx-auto formmain">
     <div class="cardstyle">
         <div >
             <h1 class="cardtopheading">Secret Diary</h1>
             </div>
-        <div class="cardbody">
+        <div class="cardbody"><!--cardbody start-->
             <h2 class="cardhead">Store your thought permanently and securely.</h2><br/>
             <div class="alert alert-danger" role="alert" id="warn" style="display: none">
                There was an error(s) in your form:<br>
                 Please check your email and password
             </div>
             <p class="subheading">Login your Username and password</p>
-        </div>
-<form action="" name="loginform" method="post">
-<div class="form-group">
+        </div><!--cardbody close-->
+<form action="<?php echo $_SERVER["PHP_SELF"]?>" name="loginform" method="post"><!--form start-->
+<div class="form-group"><!--form group start-->
 <input type="email" id="email" class="form-control email " placeholder="Your Email" name="emailid" required/>
 
 </div>
 <!--close form-group-->
-<div class="form-group">
+<div class="form-group"><!--form group start-->
 <input type="password" id="password" class="form-control password" placeholder="Your Password" name="passwordid"/>
 </div>
 <!--close form-group-->
-<div class="form-group">
+<div class="form-group"><!--form group start-->
     <input type="checkbox" class="form-group" id="exampleCheck1">
-    <label class="form-group subheading" for="exampleCheck1">Stay logged in</label></div>
+    <label class="form-group subheading" for="exampleCheck1">Stay logged in</label></div><!--close form-group-->
 
-<div class="form-group" style="margin-top:-20px">
+<div class="form-group" style="margin-top:-20px"><!--form group start-->
 <button type="submit" class="btn btn-success form-group subheading"  id="login" name="login">Log In!</button>
 </div>
 <!--close form-group-->
-<div class="form-group" style="margin-top:-20px">
+<div class="form-group" style="margin-top:-20px"><!--form group start-->
 <a href="./index.php" style="font-size:18px;font-weight:bold !importent">Sign up </a>
-</div>
+</div><!--close form-group-->
     <?php include "connect.php";
     if(isset($_POST["login"]))
     {
@@ -58,7 +58,7 @@ session_start();
         $result=mysqli_query($conn,$sql);
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-               if( $row["email"]==$em && $row["password"]==$pas ||$pas!="")
+               if( $row["email"]==$em && $row["password"]==$pas)
                {
                    $_SESSION['email']=$em;
                     $_SESSION['password']=$pas;
@@ -76,10 +76,10 @@ session_start();
     mysqli_close($conn);
 
     ?>
-</form>
-<!--close card body-->
+</form><!--form close-->
+
 </div>
-<!--close card -->
+<!--cardstyle close -->
 </div>
 <!--close col-md-5-->
 </div>
