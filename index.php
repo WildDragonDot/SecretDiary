@@ -1,3 +1,7 @@
+<?php
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,13 +26,13 @@
             <h2 class="cardhead">Store your thought permanently and securely.</h2><br/>
             <p class="subheading">Interested? Sign up now</p>
         </div>
-<form>
+<form action="<?php echo $_SERVER["PHP_SELF"]?>" name="dataform" method="post">
 <div class="form-group">
-<input type="email" id="email" class="form-control email" placeholder="Your Email"/>
+<input type="email" id="email" class="form-control email" placeholder="Your Email" name="email" required/>
 </div>
 <!--close form-group-->
 <div class="form-group">
-<input type="password" id="password" class="form-control password" placeholder="Your Password"/>
+<input type="password" id="password" class="form-control password" placeholder="Your Password" name="password" required/>
 </div>
 <!--close form-group-->
 <div class="form-group">
@@ -36,13 +40,34 @@
     <label class="form-group subheading" for="exampleCheck1">Stay logged in</label></div>
 
 <div class="form-group" style="margin-top:-20px">
-<button type="submit" class="btn btn-success form-group subheading" >Sign Up!</button>
+<button type="submit" class="btn btn-success form-group subheading" name="signup" >Sign Up!</button>
 </div>
 <!--close form-group-->
 <div class="form-group" style="margin-top:-20px">
 <a href="./login.php" style="font-size:18px;font-weight:bold !importent;">Log in </a>
 </div>
+    <?php include "connect.php";
+    if(isset($_POST["signup"]))
+    {
+        $emailadd = $_POST['email'];
+        $passadd = $_POST['password'];
+
+        $sql = "INSERT INTO `user` (`email`,`password`) VALUES ('$emailadd','$passadd');";
+
+        if (mysqli_query($conn, $sql)) {
+            echo "Submitted";
+        } else {
+            die(mysqli_error($conn));
+        }
+
+
+    mysqli_close($conn);
+        header("location: login.php");
+    }
+
+    ?>
 </form>
+
 <!--close card body-->
 </div>
 <!--close card -->
@@ -56,3 +81,4 @@
    <script src="JS/jquery-3.5.1.min.js"></script>
 </body>
 </html>
+<?php  ob_flush(); ?>

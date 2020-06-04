@@ -1,3 +1,7 @@
+<?php
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,18 +20,20 @@
             <h1 class="cardtopheading">Secret Diary</h1>
             </div>
         <div class="cardbody">
-            <h2 class="cardhead">Store your thought permanently and securely.</h2><br/>            
-          
+            <h2 class="cardhead">Store your thought permanently and securely.</h2><br/>
+            <div class="alert alert-danger" role="alert" id="warn" style="display: none">
+                This is a danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
             <p class="subheading">Login your Username and password</p>
         </div>
-<form>
+<form action="" name="loginform" method="post">
 <div class="form-group">
-<input type="email" id="email" class="form-control email " placeholder="Your Email"/>
+<input type="email" id="email" class="form-control email " placeholder="Your Email" name="emailid" required/>
 
 </div>
 <!--close form-group-->
 <div class="form-group">
-<input type="password" id="password" class="form-control password" placeholder="Your Password"/>
+<input type="password" id="password" class="form-control password" placeholder="Your Password" name="passwordid" required/>
 </div>
 <!--close form-group-->
 <div class="form-group">
@@ -35,12 +41,44 @@
     <label class="form-group subheading" for="exampleCheck1">Stay logged in</label></div>
 
 <div class="form-group" style="margin-top:-20px">
-<button type="button" class="btn btn-success form-group subheading"  id="login">Log In!</button>
+<button type="submit" class="btn btn-success form-group subheading"  id="login" name="login">Log In!</button>
 </div>
 <!--close form-group-->
 <div class="form-group" style="margin-top:-20px">
 <a href="./index.php" style="font-size:18px;font-weight:bold !importent">Sign up </a>
 </div>
+    <?php include "connect.php";
+    if(isset($_POST["login"]))
+    {
+        $em = $_POST['emailid'];
+        $pas = $_POST['passwordid'];
+        //----sql-------//
+        $sql="SELECT id,email,password FROM user";
+        $result=mysqli_query($conn,$sql);
+
+//        $row=mysqli_fetch_array($result);
+//        echo $row['email'];
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+               if( $row["email"]==$em && $row["password"]==$pas)
+               {
+                   $_SESSION['email']=$em;
+                    $_SESSION['password']=$pas;
+                   $_SESSION['id']=$row['id'];
+                  header('location: diary.php');
+               }
+            }
+        }
+        else
+        {
+            echo"<script>document.getElementById('warn').style.display = 'block';</script>";
+        }
+        //------sql end---------//
+    }
+    mysqli_close($conn);
+    ob_flush();
+    ?>
 </form>
 <!--close card body-->
 </div>
@@ -56,3 +94,5 @@
    <script src="./app.js"></script>
 </body>
 </html>
+<?php ob_flush();
+?>
