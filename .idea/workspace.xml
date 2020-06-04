@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4340776-300d-44f9-a049-9f5692e1a11b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fetch.php" afterPath="$PROJECT_DIR$/fetch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,18 +24,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="diary.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="diary.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/diary.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2075243">
+            <state vertical-scroll-proportion="-0.65384614">
               <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <marker date="1591302585974" expanded="true" signature="2296:2325" placeholder="UPDATE `note..." />
-                <marker date="1591302585974" expanded="true" signature="2296:2326" placeholder="UPDATE `note..." />
-                <marker date="1591302585974" expanded="true" signature="2296:2349" placeholder="UPDATE `note..." />
-                <marker date="1591302585974" expanded="true" signature="2296:2354" placeholder="UPDATE `note..." />
-                <marker date="1591302585974" expanded="true" signature="2533:2631" placeholder="INSERT INTO `notes`..." />
-                <marker date="1591302585974" expanded="true" signature="2533:2648" placeholder="INSERT INTO `notes`..." />
+                <marker date="1591303000935" expanded="true" signature="2296:2325" placeholder="UPDATE `note..." />
+                <marker date="1591303000935" expanded="true" signature="2296:2326" placeholder="UPDATE `note..." />
+                <marker date="1591303000935" expanded="true" signature="2296:2349" placeholder="UPDATE `note..." />
+                <marker date="1591303000935" expanded="true" signature="2296:2354" placeholder="UPDATE `note..." />
+                <marker date="1591303000935" expanded="true" signature="2533:2631" placeholder="INSERT INTO `notes`..." />
+                <marker date="1591303000935" expanded="true" signature="2533:2648" placeholder="INSERT INTO `notes`..." />
               </folding>
             </state>
           </provider>
@@ -44,23 +44,23 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="29.76923">
-              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+            <state vertical-scroll-proportion="-7.1923075">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding>
-                <marker date="1591302182258" expanded="true" signature="2116:2147" placeholder="SELECT email..user..." />
-                <marker date="1591302182258" expanded="true" signature="2546:2617" placeholder="INSERT INTO `user`..." />
+                <marker date="1591303000936" expanded="true" signature="2116:2147" placeholder="SELECT email..user..." />
+                <marker date="1591303000936" expanded="true" signature="2546:2617" placeholder="INSERT INTO `user`..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-37.576923">
-              <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.3604369">
+              <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
               <folding>
-                <marker date="1591301764688" expanded="true" signature="2336:2370" placeholder="SELECT email..user..." />
+                <marker date="1591303000938" expanded="true" signature="2336:2370" placeholder="SELECT email..user..." />
               </folding>
             </state>
           </provider>
@@ -79,9 +79,9 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/diary.php" />
         <option value="$PROJECT_DIR$/fetch.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -207,7 +207,7 @@
     <frame x="-4" y="0" width="1284" height="1010" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14787582" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1503268" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.028473804" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -266,12 +266,48 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1591302585974" expanded="true" signature="2296:2325" placeholder="UPDATE `note..." />
-            <marker date="1591302585974" expanded="true" signature="2296:2326" placeholder="UPDATE `note..." />
-            <marker date="1591302585974" expanded="true" signature="2296:2349" placeholder="UPDATE `note..." />
-            <marker date="1591302585974" expanded="true" signature="2296:2354" placeholder="UPDATE `note..." />
-            <marker date="1591302585974" expanded="true" signature="2533:2631" placeholder="INSERT INTO `notes`..." />
-            <marker date="1591302585974" expanded="true" signature="2533:2648" placeholder="INSERT INTO `notes`..." />
+            <marker date="1591303000935" expanded="true" signature="2296:2325" placeholder="UPDATE `note..." />
+            <marker date="1591303000935" expanded="true" signature="2296:2326" placeholder="UPDATE `note..." />
+            <marker date="1591303000935" expanded="true" signature="2296:2349" placeholder="UPDATE `note..." />
+            <marker date="1591303000935" expanded="true" signature="2296:2354" placeholder="UPDATE `note..." />
+            <marker date="1591303000935" expanded="true" signature="2533:2631" placeholder="INSERT INTO `notes`..." />
+            <marker date="1591303000935" expanded="true" signature="2533:2648" placeholder="INSERT INTO `notes`..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <marker date="1591303000936" expanded="true" signature="2116:2147" placeholder="SELECT email..user..." />
+            <marker date="1591303000936" expanded="true" signature="2546:2617" placeholder="INSERT INTO `user`..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+          <folding>
+            <marker date="1591303000938" expanded="true" signature="2336:2370" placeholder="SELECT email..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1591303000935" expanded="true" signature="2296:2325" placeholder="UPDATE `note..." />
+            <marker date="1591303000935" expanded="true" signature="2296:2326" placeholder="UPDATE `note..." />
+            <marker date="1591303000935" expanded="true" signature="2296:2349" placeholder="UPDATE `note..." />
+            <marker date="1591303000935" expanded="true" signature="2296:2354" placeholder="UPDATE `note..." />
+            <marker date="1591303000935" expanded="true" signature="2533:2631" placeholder="INSERT INTO `notes`..." />
+            <marker date="1591303000935" expanded="true" signature="2533:2648" placeholder="INSERT INTO `notes`..." />
           </folding>
         </state>
       </provider>
@@ -280,7 +316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -289,8 +324,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
           <folding>
-            <marker date="1591302182258" expanded="true" signature="2116:2147" placeholder="SELECT email..user..." />
-            <marker date="1591302182258" expanded="true" signature="2546:2617" placeholder="INSERT INTO `user`..." />
+            <marker date="1591303000936" expanded="true" signature="2116:2147" placeholder="SELECT email..user..." />
+            <marker date="1591303000936" expanded="true" signature="2546:2617" placeholder="INSERT INTO `user`..." />
           </folding>
         </state>
       </provider>
@@ -300,7 +335,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
           <folding>
-            <marker date="1591301764688" expanded="true" signature="2336:2370" placeholder="SELECT email..user..." />
+            <marker date="1591303000938" expanded="true" signature="2336:2370" placeholder="SELECT email..user..." />
           </folding>
         </state>
       </provider>
@@ -337,7 +372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308">
           <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -345,7 +379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -353,7 +386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.21723302">
           <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -361,50 +393,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33009708">
           <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <marker date="1591303000935" expanded="true" signature="2296:2325" placeholder="UPDATE `note..." />
+            <marker date="1591303000935" expanded="true" signature="2296:2326" placeholder="UPDATE `note..." />
+            <marker date="1591303000935" expanded="true" signature="2296:2349" placeholder="UPDATE `note..." />
+            <marker date="1591303000935" expanded="true" signature="2296:2354" placeholder="UPDATE `note..." />
+            <marker date="1591303000935" expanded="true" signature="2533:2631" placeholder="INSERT INTO `notes`..." />
+            <marker date="1591303000935" expanded="true" signature="2533:2648" placeholder="INSERT INTO `notes`..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="29.76923">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
-            <marker date="1591302182258" expanded="true" signature="2116:2147" placeholder="SELECT email..user..." />
-            <marker date="1591302182258" expanded="true" signature="2546:2617" placeholder="INSERT INTO `user`..." />
+            <marker date="1591303000936" expanded="true" signature="2116:2147" placeholder="SELECT email..user..." />
+            <marker date="1591303000936" expanded="true" signature="2546:2617" placeholder="INSERT INTO `user`..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-37.576923">
-          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.3604369">
+          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
           <folding>
-            <marker date="1591301764688" expanded="true" signature="2336:2370" placeholder="SELECT email..user..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fetch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diary.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2075243">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <marker date="1591302585974" expanded="true" signature="2296:2325" placeholder="UPDATE `note..." />
-            <marker date="1591302585974" expanded="true" signature="2296:2326" placeholder="UPDATE `note..." />
-            <marker date="1591302585974" expanded="true" signature="2296:2349" placeholder="UPDATE `note..." />
-            <marker date="1591302585974" expanded="true" signature="2296:2354" placeholder="UPDATE `note..." />
-            <marker date="1591302585974" expanded="true" signature="2533:2631" placeholder="INSERT INTO `notes`..." />
-            <marker date="1591302585974" expanded="true" signature="2533:2648" placeholder="INSERT INTO `notes`..." />
+            <marker date="1591303000938" expanded="true" signature="2336:2370" placeholder="SELECT email..user..." />
           </folding>
         </state>
       </provider>
