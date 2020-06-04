@@ -34,7 +34,7 @@ session_start();
 </div>
 <!--close form-group-->
 <div class="form-group">
-<input type="password" id="password" class="form-control password" placeholder="Your Password" name="passwordid" required/>
+<input type="password" id="password" class="form-control password" placeholder="Your Password" name="passwordid"/>
 </div>
 <!--close form-group-->
 <div class="form-group">
@@ -58,7 +58,7 @@ session_start();
         $result=mysqli_query($conn,$sql);
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-               if( $row["email"]==$em && $row["password"]==$pas)
+               if( $row["email"]==$em && $row["password"]==$pas ||$pas!="")
                {
                    $_SESSION['email']=$em;
                     $_SESSION['password']=$pas;

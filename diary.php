@@ -4,7 +4,7 @@ session_start();
 if(!isset($_SESSION['email']))
     header('location:index.php');
 ?>
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@ if(!isset($_SESSION['email']))
 </head>
 
 <body>
-<nav class="navbar navbar-inverse" style="background: #fff">
+<nav class="navbar navbar-inverse" style="background: #fff;">
     <div class="container-fluid">
         <div class="navbar-header">
             <h3 style="color: #626262">Secret Diary</h3>
