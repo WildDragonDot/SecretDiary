@@ -1,3 +1,7 @@
+<?php
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,9 +28,9 @@
 <div class="col-sm-12 mx-auto mt-5 diaryborder">
 
 <form action="javascript:void(0)">
-  <textarea type="text"  name="txtarea" class="textareastyle" id="textarea">
+  <textarea type="text"  name="textarea" class="textareastyle" id="textarea">
 </textarea>
-    <input type="hidden" class="form-control" id="projectid" name="projectid">
+    <input type="hidden" class="form-control" id="post_id" name="post_id">
     <div id="autosave"></div>
 </form>
 
@@ -37,39 +41,69 @@
 </div>
 <!--close container-->
 <script>
-    function autosave()
-    {
-        var textarea = $("#textarea").val();
-        var projectid = $("#projectid").val();
+    $(document).ready(function(){
 
-        if(textarea!=""){
+        function autosave()
+    {
+       var textarea = $("#textarea").val();
+        var post_id = $("#post_id").val();
+        if(textarea != ""){
             $.ajax({
-                url:"fetch.php",
+                url:"diary.php",
                 method:"POST",
-            data:{t:textarea,p:projectid},
+            data:{t:textarea,p:post_id},
             dataType:"TEXT",
                 success:function(data){
                     if(data!="")
                     {
-                        $("#projectid").val(data);
+                        $("#post_id").val(data);
                     }
-                    alert("data save");
-                    $("autosave").text("data save successfully");
+                    $("#autosave").text("data save successfully");
+                    setInterval(function(){
+                        $('#autosave').text('');
+                    },2000);
                 } /*success*/
 
-            })
+            });
 
         }
     }
+        setInterval(function(){
+            autosave();
+        },5000);
 
-    setInterval(function() {
-        autosave();
-        setInterval(function () {
-            $("autosave").text(" ")
-        }, 3000);
-    },5000)
+    });
+
 </script>
+ <?php
+ include "connect.php";
 
+ $email = $_SESSION['email'];
+ $password = $_SESSION['password'];
+ $id = $_SESSION['id'];
+
+ if($_POST["p"]!=''){
+//update
+     $sql="UPDATE `notes` SET `message`='".$_POST["t"]."' WHERE `id`=$id";
+     if (mysqli_query($conn, $sql)) {
+         echo "Updated";
+     } else {
+         die(mysqli_error($conn));
+     }
+     mysqli_close($conn);
+ }
+ else {
+         $sql = "INSERT INTO `notes` (`id`, `email`, `password`, `message`) VALUES ('$id', '$email', '$password', '".$_POST["t"]."');";
+
+         if (mysqli_query($conn, $sql)) {
+             echo "Submitted";
+         } else {
+             die(mysqli_error($conn));
+         }
+         mysqli_close($conn);
+
+ }
+    ?>
 <!--   <script src="JS/jquery-3.5.1.min.js"></script>-->
 </body>
 </html>

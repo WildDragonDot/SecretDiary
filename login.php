@@ -67,17 +67,17 @@ session_start();
                     $_SESSION['password']=$pas;
                    $_SESSION['id']=$row['id'];
                   header('location: diary.php');
+               }else
+               {
+                   echo"<script>document.getElementById('warn').style.display = 'block';</script>";
                }
             }
         }
-        else
-        {
-            echo"<script>document.getElementById('warn').style.display = 'block';</script>";
-        }
+
         //------sql end---------//
     }
     mysqli_close($conn);
-    ob_flush();
+
     ?>
 </form>
 <!--close card body-->
