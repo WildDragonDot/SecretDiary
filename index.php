@@ -24,6 +24,9 @@ session_start();
             </div>
         <div class="cardbody">
             <h2 class="cardhead">Store your thought permanently and securely.</h2><br/>
+            <div class="alert alert-danger" role="alert" id="warn" style="display: none">
+               Already User, Please Log in.
+            </div>
             <p class="subheading">Interested? Sign up now</p>
         </div>
 <form action="<?php echo $_SERVER["PHP_SELF"]?>" name="dataform" method="post">
@@ -52,17 +55,35 @@ session_start();
         $emailadd = $_POST['email'];
         $passadd = $_POST['password'];
 
-        $sql = "INSERT INTO `user` (`email`,`password`) VALUES ('$emailadd','$passadd');";
+        $sql="SELECT email,password FROM user";
+        $result=mysqli_query($conn,$sql);
 
-        if (mysqli_query($conn, $sql)) {
-            echo "Submitted";
-        } else {
-            die(mysqli_error($conn));
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                if( $row["email"]==$emailadd)
+                {
+                    echo"<script>document.getElementById('warn').style.display = 'block';</script>";
+
+                }
+
+                else
+                {
+                    $sql = "INSERT INTO `user` (`email`,`password`) VALUES ('$emailadd','$passadd');";
+
+                    if (mysqli_query($conn, $sql)) {
+                        echo "Submitted";
+                    } else {
+                        die(mysqli_error($conn));
+                    }
+
+
+                    mysqli_close($conn);
+                    header("location: login.php");
+                }
+            }
         }
 
 
-    mysqli_close($conn);
-        header("location: login.php");
     }
 
     ?>

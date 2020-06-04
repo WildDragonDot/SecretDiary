@@ -22,7 +22,8 @@ session_start();
         <div class="cardbody">
             <h2 class="cardhead">Store your thought permanently and securely.</h2><br/>
             <div class="alert alert-danger" role="alert" id="warn" style="display: none">
-                This is a danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+               There was an error(s) in your form:<br>
+                Please check your email and password
             </div>
             <p class="subheading">Login your Username and password</p>
         </div>
@@ -55,10 +56,6 @@ session_start();
         //----sql-------//
         $sql="SELECT id,email,password FROM user";
         $result=mysqli_query($conn,$sql);
-
-//        $row=mysqli_fetch_array($result);
-//        echo $row['email'];
-
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                if( $row["email"]==$em && $row["password"]==$pas)

@@ -1,6 +1,9 @@
 <?php
 ob_start();
 session_start();
+if(!isset($_SESSION['email']))
+    header('location:index.php');
+?>
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +23,7 @@ session_start();
         <div class="navbar-header">
             <h3 style="color: #626262">Secret Diary</h3>
         </div>
-        <button class="btn btn-success navbar-btn">Logout</button>
+        <a href="logout.php" class="btn btn-success navbar-btn" name="logout"> Logout</a>
     </div>
 </nav>
 <div class="container">
@@ -58,10 +61,10 @@ session_start();
                     {
                         $("#post_id").val(data);
                     }
-                    $("#autosave").text("data save successfully");
+                    $("#autosave").text("");
                     setInterval(function(){
                         $('#autosave').text('');
-                    },2000);
+                    },1000);
                 } /*success*/
 
             });
@@ -70,7 +73,7 @@ session_start();
     }
         setInterval(function(){
             autosave();
-        },5000);
+        },1000);
 
     });
 
@@ -81,7 +84,12 @@ session_start();
  $email = $_SESSION['email'];
  $password = $_SESSION['password'];
  $id = $_SESSION['id'];
-
+ if($email==""||$password=="")
+ {
+ mysqli_close($conn);
+ }
+else
+{
  if($_POST["p"]!=''){
 //update
      $sql="UPDATE `notes` SET `message`='".$_POST["t"]."' WHERE `id`=$id";
@@ -103,7 +111,11 @@ session_start();
          mysqli_close($conn);
 
  }
+ }
     ?>
 <!--   <script src="JS/jquery-3.5.1.min.js"></script>-->
 </body>
 </html>
+
+<?php ob_flush();
+?>
